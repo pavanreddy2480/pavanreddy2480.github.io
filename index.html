@@ -1,34 +1,213 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>My own Website</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1 style="text-align:center">Pavan Kumar Reddy</h1>
-        <section style="text-align:center"><img src="./my_image.jpeg" alt="My Image"></section>
-        <paragraph>I am lazy and using boiler plate code as a starting point for this website, my hobbies are eating sleeping occationally i code (basically forced to for grade).</paragraph>
-        <h2>Education</h2>
-        <paragraph>
-            10th - Andhra Pradesh board.
-            12th - Telangana board.
-            Grad - IIT Palakkad.
-            currently studing in IIITH (Mtech - CSE). 
-        </paragraph>
-        <h2>Experience</h2>
-        <paragaph>I worked at Tiger Analytics as a Analyst where i learnt about how the industry actually works.</paragaph>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan Kumar Reddy | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Using a Catppuccin Macchiato inspired color palette */
+        :root {
+            --background: #24273a;
+            --surface: #363a4f;
+            --card-bg: #1e2030;
+            --text: #cad3f5;
+            --subtext: #a5adce;
+            --highlight: #b7bdf8; /* Lavender */
+            --green: #a6da95;
+            --mauve: #c6a0f6;
+        }
+
+        /* General Body Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Main Container for Centering Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--highlight);
+            object-fit: cover;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
         
-        <script src="" async defer></script>
-    </body>
+        header img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--highlight);
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--subtext);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Section Styling */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--mauve);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card h2 {
+            color: var(--green);
+            margin-top: 0;
+            border-bottom: 2px solid var(--surface);
+            padding-bottom: 0.5rem;
+        }
+
+        /* List Styling for Education, Projects, etc. */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            background-color: var(--surface);
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        ul li:hover {
+            background-color: #494d64; /* A slightly lighter surface color on hover */
+        }
+        
+        /* Skills section styling */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--highlight);
+            color: var(--background);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* A simple footer */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--subtext);
+            font-size: 0.9em;
+        }
+
+        a {
+            color: var(--highlight);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <img src="./my_image.jpeg" alt="A profile photo of Pavan Kumar Reddy">
+            <h1>Pavan Kumar Reddy</h1>
+            <p>M.Tech CSE Student @ IIIT Hyderabad</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>About Me</h2>
+                <p>
+                    I am a passionate developer and M.Tech student with a keen interest in building efficient solutions and learning new technologies. I have hands-on experience as an Analyst at Tiger Analytics, where I gained valuable insights into industry practices. My journey is driven by a curiosity for data structures, algorithms, and web technologies.
+                </p>
+            </section>
+            
+            <section class="card">
+                <h2>Skills & Interests</h2>
+                <div class="skills-list">
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Data Structures</span>
+                    <span class="skill-tag">Algorithms</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">A-Frame (VR)</span>
+                    <span class="skill-tag">CLI Customization</span>
+                    <span class="skill-tag">Systems</span>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Projects & Accomplishments</h2>
+                <ul>
+                    <li>Developed various tools, including one for generating data dictionaries from JSON with HTML/PDF export capabilities.</li>
+                    <li>Implemented complex data structures like Randomized Heaps from scratch in C++.</li>
+                    <li>Solved challenging algorithmic problems, such as the "car collision" problem using a monotonic stack.</li>
+                    <li>Created immersive Web VR experiences using the A-Frame framework.</li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>M.Tech - CSE:</strong> IIIT Hyderabad (Currently Studying)</li>
+                    <li><strong>B.Tech:</strong> IIT Palakkad</li>
+                    <li><strong>12th:</strong> Telangana Board</li>
+                    <li><strong>10th:</strong> Andhra Pradesh Board</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Experience</h2>
+                <p>
+                    <strong>Analyst at Tiger Analytics:</strong> Gained practical experience and learned how the data analytics industry works, bridging the gap between academic knowledge and real-world application.
+                </p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Designed with inspiration from past projects. &copy; 2025 Pavan Kumar Reddy</p>
+        </footer>
+
+    </div>
+
+</body>
 </html>
